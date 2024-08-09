@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme */
+.bg-light {
+    background-color: #f5f5f5;
+  }
+  
+  .text-light {
+    color: #333;
+  }
+  
+  /* Dark theme */
+  .dark .bg-dark {
+    background-color: #333;
+  }
+  
+  .dark .text-dark {
+    color: #f5f5f5;
+  }
+  
+  .animate-blink {
+    animation: blink 4s infinite;
+  }
