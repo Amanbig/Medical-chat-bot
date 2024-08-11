@@ -3,7 +3,7 @@ import UserBar from './components/UserBar';
 import ChatList from './components/ChatList';
 import ChatContext from './context';
 import AiBot from './components/AiBot';
-import ThemeToggle from './components/ThemeToggle'; // Import ThemeToggle
+import ThemeToggle from './components/ThemeToggle'; 
 
 function App() {
   const [chats, setChats] = useState([]);
