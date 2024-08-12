@@ -31,3 +31,19 @@ This project is a simple AI bot interface built with React, utilizing Framer Mot
     ```bash
     npm run dev
     ```
+
+## Connecting to backend
+
+1. **Updating the backend endpoint and response in Component 'Userbar.jsx'**:
+
+   ```javascript
+    const handlePredict = async () => {
+        try {
+            const response = await axios.post('http://localhost:5000/predicts', { value }); // put the endpoint of the backend here 
+            setChats(prevChats => [...prevChats, { value: response.data.prediction, from: 'ai' }]); //  a json reponse should be there  {'prediction':'value'} so response.data.prediction is written here accordingly update 
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+   ``` 
