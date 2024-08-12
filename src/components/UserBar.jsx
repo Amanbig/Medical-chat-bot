@@ -19,8 +19,10 @@ function UserBar() {
                 <button 
                     className="ml-4 p-4 text-xl bg-green-500 rounded-xl text-white hover:bg-green-600 active:bg-green-900 dark:bg-green-700 dark:hover:bg-green-600 dark:active:bg-green-800" 
                     onClick={() => {
-                        setChats([...chats, { value: value, from: 'user' }]);
-                        setValue(''); 
+                        if(value){
+                            setChats([...chats, { value: value, from: 'user' }]);
+                            setValue('');
+                        } 
                     }}
                 >
                     <FiArrowRight className="text-white" />
